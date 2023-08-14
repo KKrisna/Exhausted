@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Exhausted</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name">User Name</string>
+    <string name="your_cars">Your Cars</string>
 </resources>
