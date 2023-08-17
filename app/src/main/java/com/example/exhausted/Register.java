@@ -100,8 +100,16 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
 
-                                if (task.isSuccessful()) Toast.makeText(Register.this, "Account created.",
-                                        Toast.LENGTH_SHORT).show();
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Register.this, "Account created.",
+                                            Toast.LENGTH_SHORT).show();
+
+                                    Intent intent = new Intent(getApplicationContext(), Login.class);
+
+                                    startActivity(intent);
+
+                                    finish();
+                                }
 
                                 // If sign in fails, display a message to the user.
                                 else Toast.makeText(Register.this, "Authentication failed.",
