@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
 
     ProgressBar progressBar;
 
-    TextView textView;
+    TextView textViewRegister, textViewForgotPass;
 
     @Override
     public void onStart() {
@@ -59,12 +59,25 @@ public class Login extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        textView = findViewById(R.id.registerNow);
+        textViewRegister = findViewById(R.id.registerNow);
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        textViewForgotPass = findViewById(R.id.forgotPassword);
+
+        textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
+
+                startActivity(intent);
+
+                finish();
+            }
+        });
+
+        textViewForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ForgotPassword.class);
 
                 startActivity(intent);
 
